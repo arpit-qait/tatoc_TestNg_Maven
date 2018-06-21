@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestFile" duration-ms="3780" started-at="2018-06-21T13:12:20Z" finished-at="2018-06-21T13:12:24Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="3780" started-at="2018-06-21T13:12:20Z" finished-at="2018-06-21T13:12:24Z">
+      <class name="TestFile">
+        <test-method status="PASS" signature="OpenCourseWebSite()[pri:0, instance:TestFile@1f256fa]" name="OpenCourseWebSite" is-config="true" duration-ms="3171" started-at="2018-06-21T18:42:20Z" finished-at="2018-06-21T18:42:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenCourseWebSite -->
+        <test-method status="PASS" signature="CourseSelect()[pri:0, instance:TestFile@1f256fa]" name="CourseSelect" duration-ms="200" started-at="2018-06-21T18:42:23Z" finished-at="2018-06-21T18:42:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CourseSelect -->
+        <test-method status="PASS" signature="CheckGridPage()[pri:0, instance:TestFile@1f256fa]" name="CheckGridPage" duration-ms="21" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.CourseSelect" finished-at="2018-06-21T18:42:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckGridPage -->
+        <test-method status="PASS" signature="SelectRedBox()[pri:0, instance:TestFile@1f256fa]" name="SelectRedBox" duration-ms="148" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.CheckGridPage" finished-at="2018-06-21T18:42:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectRedBox -->
+        <test-method status="PASS" signature="SelectGreenBox()[pri:0, instance:TestFile@1f256fa]" name="SelectGreenBox" duration-ms="189" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.CheckGridPage" finished-at="2018-06-21T18:42:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectGreenBox -->
+        <test-method status="PASS" signature="CheckErrorPage()[pri:0, instance:TestFile@1f256fa]" name="CheckErrorPage" duration-ms="39" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.SelectRedBox" finished-at="2018-06-21T18:42:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckErrorPage -->
+      </class> <!-- TestFile -->
+    </test> <!-- Command line test -->
+  </suite> <!-- TestFile -->
+</testng-results>
