@@ -41,8 +41,22 @@ public class Match {
 //            driver.switchTo().frame(0);
             box2_Color = getSecondBoxAttribute();
         }
+        driver.switchTo().parentFrame();
         driver.findElement(By.linkText("Proceed")).click();
         return new Drag(driver);
+    }
+    public Error notMatchBoxColor(){
+        String box1_Color = getFirstBoxAttribute();
+        String box2_Color = getSecondBoxAttribute();
+        while(box1_Color.equals(box2_Color)){
+            driver.switchTo().parentFrame();
+            driver.findElement(By.linkText("Repaint BOx 2")).click();
+            box2_Color = getSecondBoxAttribute();
+                    
+        }
+        driver.switchTo().parentFrame();
+        driver.findElement(By.linkText("Proceed")).click();
+        return new Error(driver);
     }
     }
 

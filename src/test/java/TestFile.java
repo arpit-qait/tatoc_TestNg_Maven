@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import static org.testng.Assert.*;
@@ -19,11 +20,11 @@ import org.testng.annotations.Test;
  */
 public class TestFile {
     WebDriver driver;
-    Open page1 ;
-    Grid page2;
+    Open open ;
+    Grid grid;
     Error pageErr;
-    Match page3;
-    
+    Match match;
+    Drag drag;
     
     public TestFile() {
     }
@@ -32,33 +33,51 @@ public class TestFile {
         System.setProperty("webdriver.chrome.driver", "E:\\My Practice\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("http://10.0.1.86/tatoc");
-        page1 = new Open(driver);
+        open = new Open(driver);
     }
     @Test
     public void CourseSelect(){
-        page2 = page1.SelectCourse("Basic Course");
+        grid = open.SelectCourse("Basic Course");
         
         
     }
     @Test(dependsOnMethods = {"CourseSelect"})
     public void CheckGridPage(){
-        assertTrue(page2.checkGridPageValidity());
+        assertTrue(grid.checkGridPageValidity());
     }
     
     @Test(dependsOnMethods = {"CheckGridPage"},priority = 1)
     public void SelectRedBox(){
         
-         pageErr = page2.RedBoxSelection();
+         pageErr = grid.RedBoxSelection();
         
     }
     
     @Test(dependsOnMethods = {"CheckGridPage"}, priority = 2)
     public void SelectGreenBox(){
         driver.navigate().back();
-         page3 = page2.GreenBoxSelection();
+         match = grid.GreenBoxSelection();
     }
     @Test(dependsOnMethods = {"SelectRedBox"})
     public void CheckErrorPage(){
+        assertTrue(pageErr.errorMessageDisplayed());
+    }
+    @Test(dependsOnMethods = {"SelectGreenBox"})
+    public void CheckMatchPage(){
+        assertTrue(match.checkMatchboxValidity());
+    }
+    @Test(dependsOnMethods = {"CheckMatchPage"},priority = 2)
+    public void BoxesMatched(){
+        
+        driver.navigate().back();        
+        drag = match.matchBoxColor();
+        
+        
+    }
+    @Test(dependsOnMethods = {"CheckMatchPage"}, priority = 1)
+    public void BoxNonMatched(){
+        
+        pageErr = match.notMatchBoxColor();
         assertTrue(pageErr.errorMessageDisplayed());
     }
     // TODO add test methods here.

@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,27 @@
                     <div class="method-list-content passed suite-TestFile">
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestFile" title="TestFile" hash-for-method="BoxNonMatched">BoxNonMatched</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestFile" title="TestFile" hash-for-method="BoxesMatched">BoxesMatched</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestFile" title="TestFile" hash-for-method="CheckErrorPage">CheckErrorPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestFile" title="TestFile" hash-for-method="CheckGridPage">CheckGridPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-TestFile" title="TestFile" hash-for-method="CheckMatchPage">CheckMatchPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -144,6 +159,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="BoxNonMatched">
+                  </a> <!-- BoxNonMatched -->
+                  <span class="method-name">BoxNonMatched</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="BoxesMatched">
+                  </a> <!-- BoxesMatched -->
+                  <span class="method-name">BoxesMatched</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="CheckErrorPage">
                   </a> <!-- CheckErrorPage -->
                   <span class="method-name">CheckErrorPage</span>
@@ -154,6 +183,13 @@
                   <a name="CheckGridPage">
                   </a> <!-- CheckGridPage -->
                   <span class="method-name">CheckGridPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckMatchPage">
+                  </a> <!-- CheckMatchPage -->
+                  <span class="method-name">CheckMatchPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -230,32 +266,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'CourseSelect')
+data.setCell(0, 1, 'BoxesMatched')
 data.setCell(0, 2, 'TestFile')
-data.setCell(0, 3, 200);
+data.setCell(0, 3, 899);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'SelectGreenBox')
+data.setCell(1, 1, 'BoxNonMatched')
 data.setCell(1, 2, 'TestFile')
-data.setCell(1, 3, 189);
+data.setCell(1, 3, 252);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'SelectRedBox')
+data.setCell(2, 1, 'SelectGreenBox')
 data.setCell(2, 2, 'TestFile')
-data.setCell(2, 3, 148);
+data.setCell(2, 3, 187);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'CheckErrorPage')
+data.setCell(3, 1, 'CourseSelect')
 data.setCell(3, 2, 'TestFile')
-data.setCell(3, 3, 39);
+data.setCell(3, 3, 182);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'CheckGridPage')
+data.setCell(4, 1, 'SelectRedBox')
 data.setCell(4, 2, 'TestFile')
-data.setCell(4, 3, 21);
+data.setCell(4, 3, 102);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'CheckErrorPage')
+data.setCell(5, 2, 'TestFile')
+data.setCell(5, 3, 35);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'CheckMatchPage')
+data.setCell(6, 2, 'TestFile')
+data.setCell(6, 3, 29);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'CheckGridPage')
+data.setCell(7, 2, 'TestFile')
+data.setCell(7, 3, 23);
 window.suiteTableData['TestFile']= { tableData: data, tableDiv: 'times-div-TestFile'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 597 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-TestFile">
               </div> <!-- times-div-TestFile -->
             </div> <!-- times-div -->
@@ -288,23 +336,35 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">CourseSelect</span>
-                <span class="method-start">3174 ms</span>
+                <span class="method-start">3282 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">CheckGridPage</span>
-                <span class="method-start">3376 ms</span>
+                <span class="method-start">3466 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SelectRedBox</span>
-                <span class="method-start">3397 ms</span>
+                <span class="method-start">3489 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">SelectGreenBox</span>
-                <span class="method-start">3547 ms</span>
+                <span class="method-start">3592 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckMatchPage</span>
+                <span class="method-start">3780 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">CheckErrorPage</span>
-                <span class="method-start">3736 ms</span>
+                <span class="method-start">3809 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BoxNonMatched</span>
+                <span class="method-start">3844 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">BoxesMatched</span>
+                <span class="method-start">4096 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

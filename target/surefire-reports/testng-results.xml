@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="TestFile" duration-ms="3780" started-at="2018-06-21T13:12:20Z" finished-at="2018-06-21T13:12:24Z">
+  <suite name="TestFile" duration-ms="5000" started-at="2018-06-21T14:08:56Z" finished-at="2018-06-21T14:09:01Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="3780" started-at="2018-06-21T13:12:20Z" finished-at="2018-06-21T13:12:24Z">
+    <test name="Command line test" duration-ms="5000" started-at="2018-06-21T14:08:56Z" finished-at="2018-06-21T14:09:01Z">
       <class name="TestFile">
-        <test-method status="PASS" signature="OpenCourseWebSite()[pri:0, instance:TestFile@1f256fa]" name="OpenCourseWebSite" is-config="true" duration-ms="3171" started-at="2018-06-21T18:42:20Z" finished-at="2018-06-21T18:42:23Z">
+        <test-method status="PASS" signature="OpenCourseWebSite()[pri:0, instance:TestFile@f71333]" name="OpenCourseWebSite" is-config="true" duration-ms="3279" started-at="2018-06-21T19:38:56Z" finished-at="2018-06-21T19:38:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenCourseWebSite -->
-        <test-method status="PASS" signature="CourseSelect()[pri:0, instance:TestFile@1f256fa]" name="CourseSelect" duration-ms="200" started-at="2018-06-21T18:42:23Z" finished-at="2018-06-21T18:42:24Z">
+        <test-method status="PASS" signature="CourseSelect()[pri:0, instance:TestFile@f71333]" name="CourseSelect" duration-ms="182" started-at="2018-06-21T19:38:59Z" finished-at="2018-06-21T19:38:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CourseSelect -->
-        <test-method status="PASS" signature="CheckGridPage()[pri:0, instance:TestFile@1f256fa]" name="CheckGridPage" duration-ms="21" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.CourseSelect" finished-at="2018-06-21T18:42:24Z">
+        <test-method status="PASS" signature="CheckGridPage()[pri:0, instance:TestFile@f71333]" name="CheckGridPage" duration-ms="23" started-at="2018-06-21T19:38:59Z" depends-on-methods="TestFile.CourseSelect" finished-at="2018-06-21T19:38:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckGridPage -->
-        <test-method status="PASS" signature="SelectRedBox()[pri:0, instance:TestFile@1f256fa]" name="SelectRedBox" duration-ms="148" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.CheckGridPage" finished-at="2018-06-21T18:42:24Z">
+        <test-method status="PASS" signature="SelectRedBox()[pri:0, instance:TestFile@f71333]" name="SelectRedBox" duration-ms="102" started-at="2018-06-21T19:38:59Z" depends-on-methods="TestFile.CheckGridPage" finished-at="2018-06-21T19:39:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectRedBox -->
-        <test-method status="PASS" signature="SelectGreenBox()[pri:0, instance:TestFile@1f256fa]" name="SelectGreenBox" duration-ms="189" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.CheckGridPage" finished-at="2018-06-21T18:42:24Z">
+        <test-method status="PASS" signature="SelectGreenBox()[pri:0, instance:TestFile@f71333]" name="SelectGreenBox" duration-ms="187" started-at="2018-06-21T19:39:00Z" depends-on-methods="TestFile.CheckGridPage" finished-at="2018-06-21T19:39:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SelectGreenBox -->
-        <test-method status="PASS" signature="CheckErrorPage()[pri:0, instance:TestFile@1f256fa]" name="CheckErrorPage" duration-ms="39" started-at="2018-06-21T18:42:24Z" depends-on-methods="TestFile.SelectRedBox" finished-at="2018-06-21T18:42:24Z">
+        <test-method status="PASS" signature="CheckMatchPage()[pri:0, instance:TestFile@f71333]" name="CheckMatchPage" duration-ms="29" started-at="2018-06-21T19:39:00Z" depends-on-methods="TestFile.SelectGreenBox" finished-at="2018-06-21T19:39:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckMatchPage -->
+        <test-method status="PASS" signature="CheckErrorPage()[pri:0, instance:TestFile@f71333]" name="CheckErrorPage" duration-ms="35" started-at="2018-06-21T19:39:00Z" depends-on-methods="TestFile.SelectRedBox" finished-at="2018-06-21T19:39:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckErrorPage -->
+        <test-method status="PASS" signature="BoxNonMatched()[pri:0, instance:TestFile@f71333]" name="BoxNonMatched" duration-ms="252" started-at="2018-06-21T19:39:00Z" depends-on-methods="TestFile.CheckMatchPage" finished-at="2018-06-21T19:39:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BoxNonMatched -->
+        <test-method status="PASS" signature="BoxesMatched()[pri:0, instance:TestFile@f71333]" name="BoxesMatched" duration-ms="899" started-at="2018-06-21T19:39:00Z" depends-on-methods="TestFile.CheckMatchPage" finished-at="2018-06-21T19:39:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BoxesMatched -->
       </class> <!-- TestFile -->
     </test> <!-- Command line test -->
   </suite> <!-- TestFile -->
