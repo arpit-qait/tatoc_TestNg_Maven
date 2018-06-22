@@ -7,18 +7,20 @@
         <methods>
           <include name="CheckDragPage"/>
           <include name="SelectRedBox"/>
+          <include name="CheckEndPageValidity"/>
           <include name="UnsuccessfulDrag"/>
           <include name="OpenPopupSuccessfully"/>
           <include name="CheckPopupPageValidity"/>
+          <include name="InvalidToken"/>
           <include name="CheckErrorPage"/>
           <include name="CourseSelect"/>
           <include name="CheckGridPage"/>
           <include name="ValidStringPassed"/>
+          <include name="ValidToken"/>
           <include name="CheckMatchPage"/>
           <include name="BoxNonMatched"/>
           <include name="ProceedNextDirectlyFromPopupPage"/>
           <include name="SelectGreenBox"/>
-          <include name="mm"/>
           <include name="CheckPopupWindowValidity"/>
           <include name="SuccessfulDrag"/>
           <include name="EmptyStringPassed"/>

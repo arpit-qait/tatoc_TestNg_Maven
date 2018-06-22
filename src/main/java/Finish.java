@@ -12,14 +12,14 @@ import org.openqa.selenium.WebDriver;
  *
  * @author Arpitagarwal
  */
-public class Error {
+public class Finish {
     WebDriver driver;
- 
-    public Error(WebDriver driver){
+    
+    public Finish(WebDriver driver){
         this.driver = driver;
     }
-    public void errorMessageDisplayed(){
-        String errMsg = driver.findElement(By.className("page")).getText();
-        assert(errMsg.contains("Error"));
+    public void CheckEndPage(){
+        assert(driver.findElement(By.tagName("h1")).getText().contains("End"));
     }
+    
 }

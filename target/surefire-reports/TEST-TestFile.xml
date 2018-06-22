@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="19" failures="1" name="TestFile" time="4.142" errors="0" skipped="17">
+<testsuite tests="21" failures="0" name="TestFile" time="9.148" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_101\jre\bin"/>
@@ -62,62 +62,25 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase classname="TestFile" name="CourseSelect" time="0.168"/>
-  <testcase classname="TestFile" name="CheckGridPage" time="0.035">
-    <failure type="java.lang.AssertionError">java.lang.AssertionError
-	at Grid.checkGridPageValidity(Grid.java:26)
-	at TestFile.CheckGridPage(TestFile.java:48)
-</failure>
-  </testcase>
-  <testcase classname="TestFile" name="SelectRedBox" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="SelectGreenBox" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="CheckMatchPage" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="CheckErrorPage" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="BoxNonMatched" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="BoxesMatched" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="CheckDragPage" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="UnsuccessfulDrag" time="0.035">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="SuccessfulDrag" time="0.036">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="CheckPopupPageValidity" time="0.036">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="ProceedNextDirectlyFromPopupPage" time="0.036">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="OpenPopupSuccessfully" time="0.036">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="CheckPopupWindowValidity" time="0.036">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="EmptyStringPassed" time="0.037">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="ValidStringPassed" time="0.037">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="CheckCookiePageValidity" time="0.037">
-    <skipped/>
-  </testcase>
-  <testcase classname="TestFile" name="mm" time="0.037">
-    <skipped/>
-  </testcase>
+  <testcase classname="TestFile" name="CourseSelect" time="0.15"/>
+  <testcase classname="TestFile" name="CheckGridPage" time="0.035"/>
+  <testcase classname="TestFile" name="SelectRedBox" time="0.1"/>
+  <testcase classname="TestFile" name="SelectGreenBox" time="0.239"/>
+  <testcase classname="TestFile" name="CheckMatchPage" time="0.033"/>
+  <testcase classname="TestFile" name="CheckErrorPage" time="0.062"/>
+  <testcase classname="TestFile" name="BoxNonMatched" time="0.263"/>
+  <testcase classname="TestFile" name="BoxesMatched" time="0.542"/>
+  <testcase classname="TestFile" name="CheckDragPage" time="0.033"/>
+  <testcase classname="TestFile" name="UnsuccessfulDrag" time="0.088"/>
+  <testcase classname="TestFile" name="SuccessfulDrag" time="0.368"/>
+  <testcase classname="TestFile" name="CheckPopupPageValidity" time="0.027"/>
+  <testcase classname="TestFile" name="ProceedNextDirectlyFromPopupPage" time="0.086"/>
+  <testcase classname="TestFile" name="OpenPopupSuccessfully" time="0.108"/>
+  <testcase classname="TestFile" name="CheckPopupWindowValidity" time="1.075"/>
+  <testcase classname="TestFile" name="EmptyStringPassed" time="0.291"/>
+  <testcase classname="TestFile" name="ValidStringPassed" time="1.432"/>
+  <testcase classname="TestFile" name="CheckCookiePageValidity" time="0.029"/>
+  <testcase classname="TestFile" name="InvalidToken" time="0.09"/>
+  <testcase classname="TestFile" name="ValidToken" time="0.223"/>
+  <testcase classname="TestFile" name="CheckEndPageValidity" time="0.026"/>
 </testsuite>

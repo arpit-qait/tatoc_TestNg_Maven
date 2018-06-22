@@ -21,9 +21,9 @@ public class Drag {
         this.driver = driver;
         
     }
-    public Boolean checkDragPageValidity(){
+    public void checkDragPageValidity(){
         String heading = driver.findElement(By.tagName("h1")).getText();
-        return heading.contains("Drag Around");
+        assert(heading.contains("Drag Around"));
     }
     public Popup successfullDragDone(){
         WebElement point =  driver.findElement(By.id("dropbox"));

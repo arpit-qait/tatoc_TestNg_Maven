@@ -17,8 +17,23 @@ WebDriver driver;
 public Cookie(WebDriver driver){
     this.driver = driver;
 }
-public Boolean checkCookiePageValidity(){
+public void checkCookiePageValidity(){
         String heading = driver.findElement(By.tagName("h1")).getText();
-        return heading.contains("Cookie Handling");
+        assert(heading.contains("Cookie Handling"));
+}
+public Error InvalidTokenValue(){
+        driver.manage().addCookie(new org.openqa.selenium.Cookie("Token", "INVALID TOKEN"));
+        driver.findElement(By.linkText("Proceed")).click();
+        return new Error(driver);
+
+}
+public Finish ValidTokenValue(){
+        driver.findElement(By.linkText("Generate Token")).click();
+        String token = driver.findElement((By.id("token"))).getText();
+
+        driver.manage().addCookie(new org.openqa.selenium.Cookie("Token", token.substring(7)));
+        driver.findElement(By.linkText("Proceed")).click();
+        return new Finish(driver);
+
 }
 }

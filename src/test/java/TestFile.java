@@ -28,6 +28,7 @@ public class TestFile {
     Popup popup;
     PopupWindow popupWindow;
     Cookie cookie;
+    Finish finish;
     public TestFile() {
     }
     @BeforeClass
@@ -62,11 +63,11 @@ public class TestFile {
     }
     @Test(dependsOnMethods = {"SelectRedBox"})
     public void CheckErrorPage(){
-        assertTrue(pageErr.errorMessageDisplayed());
+        pageErr.errorMessageDisplayed();
     }
     @Test(dependsOnMethods = {"SelectGreenBox"})
     public void CheckMatchPage(){
-        assertTrue(match.checkMatchboxValidity());
+        match.checkMatchboxValidity();
     }
     @Test(dependsOnMethods = {"CheckMatchPage"},priority = 2)
     public void BoxesMatched(){
@@ -80,11 +81,11 @@ public class TestFile {
     public void BoxNonMatched(){
         
         pageErr = match.notMatchBoxColor();
-        assertTrue(pageErr.errorMessageDisplayed());
+        pageErr.errorMessageDisplayed();
     }
     @Test(dependsOnMethods = {"BoxesMatched"})
     public void CheckDragPage(){
-        assertTrue(drag.checkDragPageValidity());
+       drag.checkDragPageValidity();
     }
     @Test(dependsOnMethods = {"CheckDragPage"},priority = 2)
     public void SuccessfulDrag(){
@@ -97,7 +98,7 @@ public class TestFile {
     }
     @Test(dependsOnMethods = {"SuccessfulDrag"})
     public void CheckPopupPageValidity(){
-        assertTrue(popup.checkPopupPageValidity());
+        popup.checkPopupPageValidity();
     }
     @Test(dependsOnMethods = {"CheckPopupPageValidity"},priority = 2)
     public void OpenPopupSuccessfully(){
@@ -111,7 +112,7 @@ public class TestFile {
     }
     @Test(dependsOnMethods = {"OpenPopupSuccessfully"})
     public void CheckPopupWindowValidity(){
-        assertTrue(popupWindow.checkOpenedPopup());
+        popupWindow.checkOpenedPopup();
     }
     @Test(dependsOnMethods = {"CheckPopupWindowValidity"},priority = 1)
     public void EmptyStringPassed(){
@@ -126,15 +127,21 @@ public class TestFile {
     }
     @Test(dependsOnMethods = {"ValidStringPassed"})
     public void CheckCookiePageValidity(){
-        assertTrue(cookie.checkCookiePageValidity());
+       cookie.checkCookiePageValidity();
     }
-    @Test(dependsOnMethods = {"CheckCookiePageValidity"})
-    public void mm(){}
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
-
+    @Test(dependsOnMethods = {"CheckCookiePageValidity"},priority = 1)
+    public void InvalidToken(){
+     pageErr = cookie.InvalidTokenValue();
     
+    
+    }
+    @Test(dependsOnMethods = {"CheckCookiePageValidity"},priority = 2)
+    public void ValidToken(){
+        driver.navigate().back();
+        finish = cookie.ValidTokenValue();
+    }
+    @Test(dependsOnMethods = {"ValidToken"})
+    public void CheckEndPageValidity(){
+        finish.CheckEndPage();
+    }
 }

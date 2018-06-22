@@ -28,12 +28,12 @@ public class PopupWindow {
         List<String> popups =new ArrayList<>(windows);
         popupwindow = popups.get(popups.size()-1);
     }
-     public Boolean checkOpenedPopup(){
+     public void checkOpenedPopup(){
          driver.switchTo().window(popupwindow);
          System.out.println(driver.getTitle());
          String title = driver.getTitle();
          driver.switchTo().window(parentwindow);
-         return title.contains("Popup");
+         assert(title.contains("Popup"));
      }
      public Cookie fillTextEntryByValidString(){
          

@@ -18,9 +18,9 @@ public class Match {
     public Match(WebDriver driver){
         this.driver = driver;
     }
-    public Boolean checkMatchboxValidity(){
+    public void checkMatchboxValidity(){
         String heading = driver.findElement(By.tagName("h1")).getText();
-        return heading.contains("Frame Dungeon");
+        assert(heading.contains("Frame Dungeon"));
     }
     private String getFirstBoxAttribute(){
         driver.switchTo().frame(0);

@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestFile
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 1, Errors: 0, Skipped: 17, Time elapsed: 4.142 sec <<< FAILURE!
-CheckGridPage(TestFile)  Time elapsed: 0.035 sec  <<< FAILURE!
-java.lang.AssertionError
-	at Grid.checkGridPageValidity(Grid.java:26)
-	at TestFile.CheckGridPage(TestFile.java:48)
+Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.148 sec

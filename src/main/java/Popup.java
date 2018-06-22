@@ -24,9 +24,9 @@ public class Popup {
     public Popup(WebDriver driver){
         this.driver = driver;
     }
-    public Boolean checkPopupPageValidity(){
+    public void checkPopupPageValidity(){
         String heading = driver.findElement(By.tagName("h1")).getText();
-        return heading.contains("Popup Windows");
+        assert(heading.contains("Popup Windows"));
 }
     public PopupWindow openPopupWindow(){
         driver.findElement(By.linkText("Launch Popup Window")).click();
