@@ -22,7 +22,7 @@ public class Open {
     }
     public Grid SelectCourse(String courseName){
         driver.findElement(By.linkText(courseName)).click();
-        System.out.println(driver.findElement(By.tagName("h1")).getText());
+//        System.out.println(driver.findElement(By.tagName("h1")).getText());
         return new Grid(driver);
         
     }

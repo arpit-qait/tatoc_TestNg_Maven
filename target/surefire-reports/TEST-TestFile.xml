@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="TestFile" time="5.525" errors="0" skipped="0">
+<testsuite tests="19" failures="1" name="TestFile" time="4.142" errors="0" skipped="17">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_101\jre\bin"/>
@@ -62,12 +62,62 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase classname="TestFile" name="CourseSelect" time="0.179"/>
-  <testcase classname="TestFile" name="CheckGridPage" time="0.02"/>
-  <testcase classname="TestFile" name="SelectRedBox" time="0.102"/>
-  <testcase classname="TestFile" name="SelectGreenBox" time="0.187"/>
-  <testcase classname="TestFile" name="CheckMatchPage" time="0.029"/>
-  <testcase classname="TestFile" name="CheckErrorPage" time="0.034"/>
-  <testcase classname="TestFile" name="BoxNonMatched" time="0.252"/>
-  <testcase classname="TestFile" name="BoxesMatched" time="0.9"/>
+  <testcase classname="TestFile" name="CourseSelect" time="0.168"/>
+  <testcase classname="TestFile" name="CheckGridPage" time="0.035">
+    <failure type="java.lang.AssertionError">java.lang.AssertionError
+	at Grid.checkGridPageValidity(Grid.java:26)
+	at TestFile.CheckGridPage(TestFile.java:48)
+</failure>
+  </testcase>
+  <testcase classname="TestFile" name="SelectRedBox" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="SelectGreenBox" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="CheckMatchPage" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="CheckErrorPage" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="BoxNonMatched" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="BoxesMatched" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="CheckDragPage" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="UnsuccessfulDrag" time="0.035">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="SuccessfulDrag" time="0.036">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="CheckPopupPageValidity" time="0.036">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="ProceedNextDirectlyFromPopupPage" time="0.036">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="OpenPopupSuccessfully" time="0.036">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="CheckPopupWindowValidity" time="0.036">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="EmptyStringPassed" time="0.037">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="ValidStringPassed" time="0.037">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="CheckCookiePageValidity" time="0.037">
+    <skipped/>
+  </testcase>
+  <testcase classname="TestFile" name="mm" time="0.037">
+    <skipped/>
+  </testcase>
 </testsuite>

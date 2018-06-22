@@ -25,7 +25,9 @@ public class TestFile {
     Error pageErr;
     Match match;
     Drag drag;
-    
+    Popup popup;
+    PopupWindow popupWindow;
+    Cookie cookie;
     public TestFile() {
     }
     @BeforeClass
@@ -43,7 +45,7 @@ public class TestFile {
     }
     @Test(dependsOnMethods = {"CourseSelect"})
     public void CheckGridPage(){
-        assertTrue(grid.checkGridPageValidity());
+        grid.checkGridPageValidity();
     }
     
     @Test(dependsOnMethods = {"CheckGridPage"},priority = 1)
@@ -80,6 +82,54 @@ public class TestFile {
         pageErr = match.notMatchBoxColor();
         assertTrue(pageErr.errorMessageDisplayed());
     }
+    @Test(dependsOnMethods = {"BoxesMatched"})
+    public void CheckDragPage(){
+        assertTrue(drag.checkDragPageValidity());
+    }
+    @Test(dependsOnMethods = {"CheckDragPage"},priority = 2)
+    public void SuccessfulDrag(){
+        driver.navigate().back();
+        popup = drag.successfullDragDone();
+    }
+    @Test(dependsOnMethods = {"CheckDragPage"},priority = 1)
+    public void UnsuccessfulDrag(){
+        pageErr = drag.unsuccessfulDragDone();
+    }
+    @Test(dependsOnMethods = {"SuccessfulDrag"})
+    public void CheckPopupPageValidity(){
+        assertTrue(popup.checkPopupPageValidity());
+    }
+    @Test(dependsOnMethods = {"CheckPopupPageValidity"},priority = 2)
+    public void OpenPopupSuccessfully(){
+        driver.navigate().back();
+        popupWindow = popup.openPopupWindow();
+        
+    }
+    @Test(dependsOnMethods = {"CheckPopupPageValidity"},priority = 1)
+    public void ProceedNextDirectlyFromPopupPage(){
+        pageErr = popup.notOpeningPopupWindowBeforeProceeding();
+    }
+    @Test(dependsOnMethods = {"OpenPopupSuccessfully"})
+    public void CheckPopupWindowValidity(){
+        assertTrue(popupWindow.checkOpenedPopup());
+    }
+    @Test(dependsOnMethods = {"CheckPopupWindowValidity"},priority = 1)
+    public void EmptyStringPassed(){
+        
+        pageErr = popupWindow.fillTextEntryByInValidString();
+    }
+    @Test(dependsOnMethods = {"CheckPopupWindowValidity"},priority = 2)
+    public void ValidStringPassed(){
+        driver.navigate().back();
+        popupWindow = popup.openPopupWindow();
+        cookie = popupWindow.fillTextEntryByValidString();
+    }
+    @Test(dependsOnMethods = {"ValidStringPassed"})
+    public void CheckCookiePageValidity(){
+        assertTrue(cookie.checkCookiePageValidity());
+    }
+    @Test(dependsOnMethods = {"CheckCookiePageValidity"})
+    public void mm(){}
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

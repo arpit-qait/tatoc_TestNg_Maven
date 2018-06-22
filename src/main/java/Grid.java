@@ -20,15 +20,15 @@ public class Grid {
     public Grid(WebDriver driver){
         this.driver = driver;
     }
-    public Boolean checkGridPageValidity(){
+    public void checkGridPageValidity(){
         
        String heading = driver.findElement(By.tagName("h1")).getText();
-       return heading.contains("Grid Gate");
+       assert(heading.contains("Grid Gate"));
         
     }
     public Error RedBoxSelection(){
         List<WebElement> list = driver.findElements(By.className("redbox"));
-        System.out.println(list.toString());
+//        System.out.println(list.toString());
         list.get(0).click();
         return new Error(driver);
         

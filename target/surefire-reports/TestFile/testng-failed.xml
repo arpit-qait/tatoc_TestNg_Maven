@@ -5,12 +5,25 @@
     <classes>
       <class name="TestFile">
         <methods>
+          <include name="CheckDragPage"/>
+          <include name="SelectRedBox"/>
+          <include name="UnsuccessfulDrag"/>
+          <include name="OpenPopupSuccessfully"/>
+          <include name="CheckPopupPageValidity"/>
+          <include name="CheckErrorPage"/>
           <include name="CourseSelect"/>
           <include name="CheckGridPage"/>
+          <include name="ValidStringPassed"/>
           <include name="CheckMatchPage"/>
           <include name="BoxNonMatched"/>
+          <include name="ProceedNextDirectlyFromPopupPage"/>
           <include name="SelectGreenBox"/>
+          <include name="mm"/>
+          <include name="CheckPopupWindowValidity"/>
+          <include name="SuccessfulDrag"/>
+          <include name="EmptyStringPassed"/>
           <include name="BoxesMatched"/>
+          <include name="CheckCookiePageValidity"/>
           <include name="OpenCourseWebSite"/>
         </methods>
       </class> <!-- TestFile -->
